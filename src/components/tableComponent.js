@@ -12,7 +12,7 @@ const HierarchicalTable = () => {
 
 const getOriginalValue = (id,list=initialData) => {
 for (let i of list) {
-    if (i.id == id) return i.value;
+    if (i.id === id) return i.value;
     if (i.children) {
     const found = getOriginalValue(id, i.children);
     if (found) return found;
@@ -155,5 +155,6 @@ const updateInputValue = (item, id, value) => {
 };
 
 export default HierarchicalTable;
+
 
 
